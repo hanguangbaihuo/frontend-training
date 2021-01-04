@@ -2,7 +2,7 @@
  * @Author: 明华
  * @Date: 2021-01-04 10:37:40
  * @LastEditors: 明华
- * @LastEditTime: 2021-01-04 15:43:31
+ * @LastEditTime: 2021-01-04 18:52:02
  * @Description:
  * @FilePath: /frontend-training/README.md
 -->
@@ -10,6 +10,7 @@
 # 前端培训项目
 
 1. 前端培训整理包含文档和示例
+2. 文档访问地址：https://hanguangbaihuo.github.io/frontend-training/
 
 # 帮助文档
 

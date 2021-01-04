@@ -1,0 +1,24 @@
+{
+  "name": "frontend-training",
+  "version": "1.0.0",
+  "description": "前端培训文档",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "gh-pages": "^3.1.0"
+  },
+  "scripts": {
+    "deploy": "gitbook build && gh-pages -d _book -r https://github.com/hanguangbaihuo/frontend-training.git",
+    "deploy-self": "gh-pages -d _book"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shiminghua/frontend-training.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shiminghua/frontend-training/issues"
+  },
+  "homepage": "https://github.com/shiminghua/frontend-training#readme"
+}
