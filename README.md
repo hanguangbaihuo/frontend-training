@@ -2,7 +2,7 @@
  * @Author: 明华
  * @Date: 2021-01-04 10:37:40
  * @LastEditors: 明华
- * @LastEditTime: 2021-01-04 19:06:52
+ * @LastEditTime: 2021-01-04 19:12:34
  * @Description:
  * @FilePath: /frontend-training/README.md
 -->
@@ -28,9 +28,11 @@
 
 # 目录
 
-- [js 基础](./javascript-base/readme.md)
-- [react](./react/readme.md)
-- [vue](./vue/readme.md)
-- [nodejs](./nodejs/readme.md)
-- [dart](./dart/readme.md)
-- [flutter](./flutter/readme.md)
+* [js 基础](./javascript-base/readme.md)
+* [react](./react/readme.md)
+* [vue](./vue/readme.md)
+* [微信小程序](./miniapp/readme.md)
+* [nodejs](./nodejs/readme.md)
+* [dart](./dart/readme.md)
+* [flutter](./flutter/readme.md)
+* [工程化](./engineering/readme.md)
