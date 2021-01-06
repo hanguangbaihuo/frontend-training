@@ -1,0 +1,54 @@
+<!--
+ * @Author: 明华
+ * @Date: 2021-01-05 13:54:36
+ * @LastEditors: 明华
+ * @LastEditTime: 2021-01-06 16:30:35
+ * @Description: 
+ * @FilePath: /frontend-training/h5/draag_and_drop.html
+-->
+<html>
+  <head>
+    <title>拖拽事件</title>
+    <style>
+      body {
+        padding: 20px;
+      }
+      div {
+        width: 100px;
+        height: 100px;
+        border: solid 1px #000;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div draggable="true">drag1</div>
+    <div draggable="true">drag2</div>
+    <div draggable="true">drag3</div>
+
+    <script>
+      let divs = document.getElementsByTagName("div");
+      console.log(divs);
+      // divs.addEventListener('click', () => {
+      //   console.log(11111);
+      // });
+      // divs.slice().forEach((element) => {
+      //   element.addEventListener("click", (e) => {
+      //     console.log(e.innerHTML);
+      //   });
+      // });
+
+      function domEvent(e) {
+        console.log(`target ---> ${e.target.innerText}`);
+      }
+
+      for (let i = 0, len = divs.length; i < len; i++) {
+        divs[i].addEventListener("dragstart", (e) => {
+          divs[i].removeEventListener("dragenter", domEvent, false);
+          console.log(`start ---> ${e.target.innerText}`);
+        });
+        divs[i].addEventListener("dragenter", domEvent, false);
+      }
+    </script>
+  </body>
+</html>
