@@ -2,7 +2,7 @@
  * @Author: 明华
  * @Date: 2021-01-08 11:29:48
  * @LastEditors: 明华
- * @LastEditTime: 2021-01-08 16:55:16
+ * @LastEditTime: 2021-01-12 16:54:05
  * @Description: 导航表态方法工具
  * @FilePath: /shop_flutter/lib/utils/navigator_util.dart
  */
@@ -17,6 +17,7 @@ import 'package:shop_flutter/utils/fluro_convert_util.dart';
 class NavigatorUtil {
   //跳转至首页
   static goShopMainPage(BuildContext context) {
+    print(Routers.home);
     Application.router.navigateTo(context, Routers.home,
         transition: TransitionType.inFromRight, replace: true);
   }

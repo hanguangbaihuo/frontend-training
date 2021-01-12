@@ -2,13 +2,13 @@
  * @Author: 明华
  * @Date: 2021-01-08 11:25:23
  * @LastEditors: 明华
- * @LastEditTime: 2021-01-11 16:56:21
+ * @LastEditTime: 2021-01-12 16:55:29
  * @Description: 路由 handler
  * @FilePath: /shop_flutter/lib/router/router_handlers.dart
  */
 import 'package:fluro/fluro.dart';
 import 'package:flutter/material.dart';
-import 'package:shop_flutter/page/home/home_page.dart';
+import 'package:shop_flutter/page/home/index_page.dart';
 import 'package:shop_flutter/page/loading/loading_page.dart';
 import 'package:shop_flutter/page/goods/goods_category_page.dart';
 import 'package:shop_flutter/page/login/register_page.dart';
@@ -28,7 +28,7 @@ import 'package:shop_flutter/utils/fluro_convert_util.dart';
 // 首页
 var homeHandler = Handler(
     handlerFunc: (BuildContext context, Map<String, List<String>> parameters) {
-  return HomePage();
+  return IndexPage();
 });
 
 //加载页
