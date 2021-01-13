@@ -2,13 +2,13 @@
  * @Author: 明华
  * @Date: 2021-01-08 11:25:54
  * @LastEditors: 明华
- * @LastEditTime: 2021-01-11 17:06:12
+ * @LastEditTime: 2021-01-12 18:14:21
  * @Description: 路由路径配置
  * @FilePath: /shop_flutter/lib/router/routers.dart
  */
 import 'package:fluro/fluro.dart';
 import 'package:flutter/material.dart';
-import 'package:shop_flutter/page/home/home_page.dart';
+// import 'package:shop_flutter/page/home/home_page.dart';
 import 'package:shop_flutter/router/router_handlers.dart';
 
 class Routers {
