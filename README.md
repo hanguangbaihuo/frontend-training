@@ -2,11 +2,14 @@
  * @Author: 明华
  * @Date: 2021-01-04 10:37:40
  * @LastEditors: 明华
- * @LastEditTime: 2021-01-04 19:20:12
+ * @LastEditTime: 2021-01-29 14:56:11
  * @Description:
  * @FilePath: /frontend-training/README.md
 -->
 
+# 前端规范文档
+
+1. [前端规范文档](./specification/readme.md)
 # 前端培训项目
 
 1. 前端培训整理包含文档和示例
