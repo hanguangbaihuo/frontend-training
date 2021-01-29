@@ -2,7 +2,7 @@
  * @Author: 明华
  * @Date: 2021-01-04 11:57:29
  * @LastEditors: 明华
- * @LastEditTime: 2021-01-06 16:32:14
+ * @LastEditTime: 2021-01-28 15:52:52
  * @Description:
  * @FilePath: /frontend-training/SUMMARY.md
 -->
@@ -18,3 +18,4 @@
 - [dart](./dart/readme.md)
 - [flutter](./flutter/readme.md)
 - [工程化](./engineering/readme.md)
+  - [微前端](./engineering/micro_frontend.md)
