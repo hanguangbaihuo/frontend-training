@@ -2,7 +2,7 @@
  * @Author: 明华
  * @Date: 2021-01-05 13:54:36
  * @LastEditors: 明华
- * @LastEditTime: 2021-01-06 16:30:35
+ * @LastEditTime: 2021-02-04 15:33:42
  * @Description: 
  * @FilePath: /frontend-training/h5/draag_and_drop.html
 -->
@@ -48,6 +48,44 @@
           console.log(`start ---> ${e.target.innerText}`);
         });
         divs[i].addEventListener("dragenter", domEvent, false);
+      }
+    </script>
+
+    <script>
+      request(a, () => {
+        request(b, () => {
+          request(c, (data) => {
+            console.log(data);
+          });
+        });
+      });
+
+      request(c, success, errorFn);
+
+      const res1 = await request(a, isError);
+      const res2 = await request(b, res1.a);
+
+      try {
+        const res1 = await request(a);
+        const res2 = await request(b, res1.a);
+        const res3 = await request(c, res2.b, errorFn); // isError
+
+        // if (res3.isError) {
+
+        // }
+
+        res3.errorMsg;
+
+        console.log(res3);
+      } catch (err) {
+        console.log(err);
+      }
+
+      if (res1) {
+        const res2 = await request(b, res1.a);
+      }
+      if (res2) {
+        const res3 = await request(c, res2.b);
       }
     </script>
   </body>
