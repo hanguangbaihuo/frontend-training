@@ -2,7 +2,7 @@
  * @Author: 明华
  * @Date: 2021-01-29 14:52:42
  * @LastEditors: 明华
- * @LastEditTime: 2021-02-04 18:56:54
+ * @LastEditTime: 2021-02-05 10:43:16
  * @Description: 
  * @FilePath: /frontend-training/specification/readme.md
 -->
@@ -47,7 +47,9 @@
 ## 代码组织（重要性2）：可维护性（最重要）、通用性、可扩展性、易用性、健壮性
 
 - 模块划分
+    * 界定好模块边界
 - 模块封装
+    * 把核心逻辑封装在一个地方，其他方式都是对核心逻辑的调用。
 
 实施过程：需要开会讨论
 1. 自己模块：

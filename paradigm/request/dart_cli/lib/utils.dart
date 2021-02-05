@@ -2,7 +2,7 @@
  * @Author: 明华
  * @Date: 2021-02-05 07:04:53
  * @LastEditors: 明华
- * @LastEditTime: 2021-02-05 07:37:33
+ * @LastEditTime: 2021-02-05 16:13:09
  * @Description: 
  * @FilePath: /frontend-training/paradigm/request/dart_cli/lib/utils.dart
  */
@@ -31,11 +31,12 @@ class HttpUtil {
   // 构造方法
   HttpUtil() {
     // 选项
-    BaseOptions _options = BaseOptions(
+    var _options = BaseOptions(
       // 连接超时
       connectTimeout: 5000,
       // 接受超时
       receiveTimeout: 5000,
+      // validateStatus: (status) => true,
     );
 
     // 实例化 Dio
@@ -44,7 +45,8 @@ class HttpUtil {
       onRequest: (RequestOptions options) async {
         print('==================== 请求数据 ====================');
         print('url = ${options.uri.toString()}');
-        print('params = ${options.data}');
+        print('data = ${options.data}');
+        print('params = ${options.queryParameters}');
 
         // 锁住
         dio.lock();
@@ -92,19 +94,15 @@ class HttpUtil {
       {Map<String, dynamic> parameters, Options options}) async {
     // 返回对象
     Response response;
-    // 判断请求参数并发起get请求
-    if (parameters != null && options != null) {
+    try {
+      // 判断请求参数并发起get请求
       response =
           await dio.get(url, queryParameters: parameters, options: options);
-    } else if (parameters != null && options == null) {
-      response = await dio.get(url, queryParameters: parameters);
-    } else if (parameters == null && options != null) {
-      response = await dio.get(url, options: options);
-    } else {
-      response = await dio.get(url);
-    }
 
-    // 返回数据
-    return response.data;
+      // 返回数据
+      return response.data;
+    } catch (err) {
+      throw err;
+    } finally {}
   }
 }

@@ -1,0 +1,163 @@
+<!--
+ * @Author: 明华
+ * @Date: 2021-02-05 10:46:08
+ * @LastEditors: 明华
+ * @LastEditTime: 2021-02-05 17:03:18
+ * @Description: 
+ * @FilePath: /frontend-training/paradigm/request/javascript/fetch.html
+-->
+
+<html>
+  <head>
+    <title>ajax、fetch测试</title>
+    <style>
+      body {
+        padding: 20px;
+      }
+      div {
+        width: 100px;
+        height: 100px;
+        border: solid 1px #000;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div draggable="true">drag1</div>
+
+    <script src="./jquery/jquery-3.5.1.js"></script>
+    <script>
+      // 查询验证码接口
+      const apiQuerySmsCode =
+        "https://backend5.dongyouliang.com/api/core/sms_checkcode/";
+      // 需要查询的手机号，第二个会报错
+      const phone1 = "13691204807";
+      const phone2 = "13691204808";
+
+      function getToken() {
+        return "Token eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1aWQiOiIwN2FiYjgxYTQ3Y2U0ZTkxODczYmUzNDk3MmI4MjE5NyIsImFwcF9pZCI6ImFwcF8xNTIxMDEwNjIwIiwiZXhwIjoxNjEyNTE2ODkyLCJpYXQiOjE2MTI0MzA0OTIsImlzcyI6InNwYXJyb3dfY29yZSJ9.M5naHSz1SPT-1djQi0a7LGhJNam6dh_x1I1TZgNNVuo";
+      }
+
+      function getErrorData(obj) {
+        return {
+          // 600 fetch 未能处理的错误
+          status: obj.status ?? 600,
+          message: obj.message ?? "我是自定义错误",
+          error: obj,
+        };
+      }
+
+      async function requestAsync({
+        url,
+        method = "GET",
+        query,
+        data,
+        isError = false,
+      }) {
+        return fetch(url, {
+          headers: {
+            authorization: getToken(),
+          },
+        })
+          .then((response) => {
+            // return response.json();
+            // console.log("请求成功111111");
+            // console.log(response);
+            if (response.status >= 400) {
+              console.log("向后台打印日志");
+
+              if (!isError) {
+                console.log("全局错误处理");
+              }
+
+              throw getErrorData(response);
+            } else {
+              return response.json();
+            }
+          })
+          .then((data) => {
+            // console.log("请求成功111111");
+            // console.log(data);
+            return data;
+          })
+          .catch((error) => {
+            throw getErrorData(error);
+          });
+      }
+
+      /*
+      {
+        url,
+        method,
+        data,
+        query,
+        success,
+        error,
+        complete,
+      }
+      */
+      async function request(obj) {
+        try {
+          const res = await requestAsync(obj);
+          // console.log("res =====> ", res);
+          obj.success && obj.success(res);
+        } catch (err) {
+          obj.error && obj.error(err);
+        } finally {
+          obj.complete && obj.complete();
+        }
+      }
+
+      async function mainFetch() {
+        let res1 = await requestAsync({
+          url: `${apiQuerySmsCode}?phone=${phone1}`,
+        });
+
+        try {
+          let res2 = await requestAsync({
+            url: `${apiQuerySmsCode}?phone=${phone2}`,
+            isError: true,
+          });
+        } catch (err) {
+          console.error(22222222, err);
+        } finally {
+          console.log("我是requestAsync函数之后的输出");
+          console.warn("此时我可以做请求完成的事情");
+        }
+      }
+
+      function mainRequest() {
+        // request({
+        //   url: `${apiQuerySmsCode}?phone=${phone1}`,
+        //   success: (data) => {
+        //     console.log(1111111111, data);
+        //   },
+        //   error: (err) => {
+        //     console.log(22222222, err);
+        //   },
+        //   complete: () => {
+        //     console.log(333333333);
+        //   },
+        // });
+
+        request({
+          url: `${apiQuerySmsCode}?phone=${phone2}`,
+          isError: true,
+          success: (data) => {
+            console.log(1111111111, data);
+          },
+          error: (err) => {
+            console.log(22222222, err);
+          },
+          complete: () => {
+            console.log(333333333);
+          },
+        });
+      }
+
+      mainRequest();
+
+      // mainFetch();
+    </script>
+  </body>
+</html>
