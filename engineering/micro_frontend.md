@@ -2,9 +2,9 @@
  * @Author: 明华
  * @Date: 2021-01-28 15:35:01
  * @LastEditors: 明华
- * @LastEditTime: 2021-01-28 15:35:02
+ * @LastEditTime: 2021-02-05 05:57:47
  * @Description: 
- * @FilePath: /frontend-training/engineering/micro_fronent_end.md
+ * @FilePath: /frontend-training/engineering/micro_frontend.md
 -->
 # 微前端
 
@@ -88,11 +88,11 @@ import-html-entry
 
 1. 动机
 
-   ![image-20210128013957792](/Users/hulipeng/Library/Application Support/typora-user-images/image-20210128013957792.png)
+   <!-- ![image-20210128013957792](/Users/hulipeng/Library/Application Support/typora-user-images/image-20210128013957792.png) -->
 
 2. 属性
 
-![image-20210128013810997](/Users/hulipeng/Library/Application Support/typora-user-images/image-20210128013810997.png)
+<!-- ![image-20210128013810997](/Users/hulipeng/Library/Application Support/typora-user-images/image-20210128013810997.png) -->
 
 
 

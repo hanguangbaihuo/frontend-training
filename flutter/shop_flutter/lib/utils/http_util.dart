@@ -2,9 +2,9 @@
  * @Author: 明华
  * @Date: 2021-01-08 11:29:23
  * @LastEditors: 明华
- * @LastEditTime: 2021-01-08 17:43:59
+ * @LastEditTime: 2021-02-05 06:35:45
  * @Description: 网络请求工具
- * @FilePath: /shop_flutter/lib/utils/http_util.dart
+ * @FilePath: /frontend-training/flutter/shop_flutter/lib/utils/http_util.dart
  */
 
 import 'package:dio/dio.dart';
@@ -52,10 +52,13 @@ class HttpUtil {
         dio.lock();
 
         // 获取本地 token
-        await SharedPreferencesUtil.getToken().then((token) {
-          // 将 token 值放入请求头里
-          options.headers[KString.TOKEN] = token;
-        });
+        // await SharedPreferencesUtil.getToken().then((token) {
+        //   // 将 token 值放入请求头里
+        //   options.headers[KString.TOKEN] = token;
+        // });
+
+        options.headers['authorization'] =
+            "Token eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1aWQiOiIwN2FiYjgxYTQ3Y2U0ZTkxODczYmUzNDk3MmI4MjE5NyIsImFwcF9pZCI6ImFwcF8xNTIxMDEwNjIwIiwiZXhwIjoxNjEyNTE2ODkyLCJpYXQiOjE2MTI0MzA0OTIsImlzcyI6InNwYXJyb3dfY29yZSJ9.M5naHSz1SPT-1djQi0a7LGhJNam6dh_x1I1TZgNNVuo";
 
         // 解锁
         dio.unlock();

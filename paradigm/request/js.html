@@ -1,0 +1,95 @@
+<!--
+ * @Author: 明华
+ * @Date: 2021-02-05 06:05:03
+ * @LastEditors: 明华
+ * @LastEditTime: 2021-02-05 06:30:51
+ * @Description: 
+ * @FilePath: /frontend-training/paradigm/request/js.html
+-->
+<html>
+  <head>
+    <title>ajax、fetch测试</title>
+    <style>
+      body {
+        padding: 20px;
+      }
+      div {
+        width: 100px;
+        height: 100px;
+        border: solid 1px #000;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div draggable="true">drag1</div>
+
+    <script src="./jquery/jquery-3.5.1.js"></script>
+    <script>
+      // 查询验证码接口
+      const apiQuerySmsCode =
+        "https://backend5.dongyouliang.com/api/core/sms_checkcode/";
+      // 需要查询的手机号，第二个会报错
+      const phone1 = "13691204807";
+      const phone2 = "13691204808";
+
+      function request(phone) {
+        $.ajax({
+          headers: {
+            authorization:
+              "Token eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1aWQiOiIwN2FiYjgxYTQ3Y2U0ZTkxODczYmUzNDk3MmI4MjE5NyIsImFwcF9pZCI6ImFwcF8xNTIxMDEwNjIwIiwiZXhwIjoxNjEyNTE2ODkyLCJpYXQiOjE2MTI0MzA0OTIsImlzcyI6InNwYXJyb3dfY29yZSJ9.M5naHSz1SPT-1djQi0a7LGhJNam6dh_x1I1TZgNNVuo",
+          },
+          url: `${apiQuerySmsCode}?phone=${phone}`,
+          success: (data) => {
+            console.log("请求成功");
+            console.log(data);
+          },
+          error: (error) => {
+            console.error("请求失败");
+            console.log(error);
+          },
+          complete: () => {
+            console.warn("请求完成");
+          },
+        });
+      }
+
+      function main() {
+        request(phone1);
+        request(phone2);
+
+        console.log("我是request函数之后的输出");
+      }
+
+      async function requestFetch(phone) {
+        return fetch(`${apiQuerySmsCode}?phone=${phone}`, {
+          headers: {
+            authorization:
+              "Token eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1aWQiOiIwN2FiYjgxYTQ3Y2U0ZTkxODczYmUzNDk3MmI4MjE5NyIsImFwcF9pZCI6ImFwcF8xNTIxMDEwNjIwIiwiZXhwIjoxNjEyNTE2ODkyLCJpYXQiOjE2MTI0MzA0OTIsImlzcyI6InNwYXJyb3dfY29yZSJ9.M5naHSz1SPT-1djQi0a7LGhJNam6dh_x1I1TZgNNVuo",
+          },
+        })
+          .then((response) => {
+            return response.json();
+          })
+          .then((data) => {
+            console.log("请求成功");
+            console.log(data);
+          })
+          .catch((error) => {
+            console.error("请求失败");
+            console.error(error);
+          });
+      }
+
+      async function mainFetch() {
+        let res1 = await requestFetch(phone1);
+        let res2 = await requestFetch(phone2);
+        console.log("我是requestFetch函数之后的输出");
+        console.warn("此时我可以做请求完成的事情");
+      }
+
+      main();
+      mainFetch();
+    </script>
+  </body>
+</html>
