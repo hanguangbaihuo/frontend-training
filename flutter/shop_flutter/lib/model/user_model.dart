@@ -2,9 +2,9 @@
  * @Author: 明华
  * @Date: 2021-01-08 11:13:36
  * @LastEditors: 明华
- * @LastEditTime: 2021-01-11 17:21:37
+ * @LastEditTime: 2021-02-25 14:31:45
  * @Description: 
- * @FilePath: /shop_flutter/lib/model/user_model.dart
+ * @FilePath: /frontend-training/flutter/shop_flutter/lib/model/user_model.dart
  */
 
 import 'package:json_annotation/json_annotation.dart';
@@ -17,6 +17,8 @@ class UserModel extends Object {
   // 用户基本信息
   @JsonKey(name: 'userInfo')
   UserInfo userInfo;
+
+  bool loading = false;
 
   // 服务端返回的token值
   @JsonKey(name: 'token')
