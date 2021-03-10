@@ -2,14 +2,14 @@
  * @Author: 明华
  * @Date: 2021-01-04 11:57:29
  * @LastEditors: 明华
- * @LastEditTime: 2021-02-05 05:57:05
+ * @LastEditTime: 2021-03-10 14:35:06
  * @Description:
  * @FilePath: /frontend-training/SUMMARY.md
 -->
 
 # 目录
 
-- [2021年分享会](./share/2021/2021.md)
+- [2021 年分享会](./share/2021/2021.md)
 - [前端规范文档](./specification/readme.md)
 - [js 基础](./javascript-base/readme.md)
 - [h5](./h5/readme.md)

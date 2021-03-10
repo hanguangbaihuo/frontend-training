@@ -2,7 +2,7 @@
  * @Author: 明华
  * @Date: 2021-01-04 10:37:40
  * @LastEditors: 明华
- * @LastEditTime: 2021-01-29 14:56:11
+ * @LastEditTime: 2021-03-10 14:36:16
  * @Description:
  * @FilePath: /frontend-training/README.md
 -->
@@ -10,12 +10,14 @@
 # 前端规范文档
 
 1. [前端规范文档](./specification/readme.md)
+
 # 前端培训项目
 
 1. 前端培训整理包含文档和示例
 2. 文档访问地址：https://hanguangbaihuo.github.io/frontend-training/
 
 # 注意问题
+
 1. Gitbook 有 nodejs 兼容性问题，目前 nodejs 版本目前可以使用 v13.14.0 ，有更新的兼容版本大家可以更新这个版本号。
 
 # 使用方法
@@ -31,14 +33,3 @@
 
 - [Gitbook 中文文档](https://chrisniael.gitbooks.io/gitbook-documentation/content/build/index.html)
 - [Gitbook 使用教程](https://www.jianshu.com/p/421cc442f06c)
-
-# 目录
-
-* [js 基础](./javascript-base/readme.md)
-* [react](./react/readme.md)
-* [vue](./vue/readme.md)
-* [微信小程序](./miniapp/readme.md)
-* [nodejs](./nodejs/readme.md)
-* [dart](./dart/readme.md)
-* [flutter](./flutter/readme.md)
-* [工程化](./engineering/readme.md)
