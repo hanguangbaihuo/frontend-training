@@ -1,0 +1,51 @@
+<!--
+ * @Author: 明华
+ * @Date: 1985-10-26 16:15:00
+ * @LastEditors: 明华
+ * @LastEditTime: 2021-03-10 16:13:32
+ * @Description: 
+ * @FilePath: /frontend-training/docs/index.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="description" content="Description" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0"
+    />
+    <link
+      rel="stylesheet"
+      href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css"
+    />
+  </head>
+  <body>
+    <div id="app"></div>
+    <script>
+      window.$docsify = {
+        el: "#app",
+        repo: "https://github.com/hanguangbaihuo/frontend-training",
+        // basePath: "/docs/",
+        // Relative path enabled
+        // relativePath: true,
+        name: "",
+        repo: "",
+        // load from summary.md
+        loadSidebar: "summary.md",
+        // subMaxLevel: 2,
+        // nameLink: {
+        //   "/zh-cn/": "/zh-cn/",
+        //   "/": "/",
+        //   "/share/": "../share/",
+        // },
+        routerMode: "history", // default: 'hash'
+        ext: ".md",
+      };
+    </script>
+    <!-- Docsify v4 -->
+    <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+  </body>
+</html>
