@@ -2,7 +2,7 @@
  * @Author: 明华
  * @Date: 2021-03-16 17:26:19
  * @LastEditors: 明华
- * @LastEditTime: 2021-03-16 18:04:02
+ * @LastEditTime: 2021-03-16 18:09:04
  * @Description: 会飞的鸭子
  * @FilePath: /frontend-training/design_mode/strategy_pattern/duck_fly.dart
  */
@@ -61,10 +61,11 @@ abstract class Duck {
   QuackBehavior quackBehavior;
 
   // 构造函数
-  Duck(fb, qb) {
-    this.flyBehavior = fb;
-    this.quackBehavior = qb;
-  }
+  Duck(this.flyBehavior, this.quackBehavior);
+  // Duck(fb, qb) {
+  //   this.flyBehavior = fb;
+  //   this.quackBehavior = qb;
+  // }
 
   // 外观
   void display();
