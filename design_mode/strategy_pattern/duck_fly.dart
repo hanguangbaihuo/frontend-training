@@ -2,13 +2,10 @@
  * @Author: 明华
  * @Date: 2021-03-16 17:26:19
  * @LastEditors: 明华
- * @LastEditTime: 2021-03-16 18:09:04
+ * @LastEditTime: 2021-03-16 18:10:24
  * @Description: 会飞的鸭子
  * @FilePath: /frontend-training/design_mode/strategy_pattern/duck_fly.dart
  */
-
-/// 鸭子行为类
-///
 
 /// 飞行行为超类
 abstract class FlyBehavior {
