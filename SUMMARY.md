@@ -2,7 +2,7 @@
  * @Author: 明华
  * @Date: 2021-01-04 11:57:29
  * @LastEditors: zhangqiongyue
- * @LastEditTime: 2021-03-16 10:03:09
+ * @LastEditTime: 2021-03-16 10:44:04
  * @Description:
  * @FilePath: /frontend-training/SUMMARY.md
 -->
@@ -13,6 +13,7 @@
 - [前端规范文档](./specification/readme.md)
 - [js 基础](./javascript-base/readme.md)
 - [计算机网络](./computer_networking/readme.md)
+  - [HTTP](./computer_networking/HTTP.md)
 - [h5](./h5/readme.md)
 - [react](./react/readme.md)
 - [vue](./vue/readme.md)
