@@ -2,7 +2,7 @@
  * @Author: 明华
  * @Date: 2021-03-16 14:14:00
  * @LastEditors: 明华
- * @LastEditTime: 2021-03-16 14:15:39
+ * @LastEditTime: 2021-03-16 15:54:40
  * @Description: 策略模式
  * @FilePath: /frontend-training/design_mode/strategy_pattern/strategy_pattern.md
 -->
@@ -11,3 +11,4 @@
 
 1. 一个简单的模拟鸭子应用
 2. 让鸭子能飞
+  在Duck类中添加fly()方法
