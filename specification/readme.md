@@ -2,12 +2,16 @@
  * @Author: 明华
  * @Date: 2021-01-29 14:52:42
  * @LastEditors: 明华
- * @LastEditTime: 2021-03-10 14:56:57
+ * @LastEditTime: 2021-03-18 14:13:46
  * @Description:
  * @FilePath: /frontend-training/specification/readme.md
 -->
 
+
+
 # 前端规范
+
+[石墨链接](https://shimo.im/docs/gXqmev4wlNTQ9Kqo)
 
 ## 团队小目标
 
