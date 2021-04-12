@@ -2,8 +2,8 @@
  * @Author: 明华
  * @Date: 2021-04-02 15:21:32
  * @LastEditors: 明华
- * @LastEditTime: 2021-04-02 15:27:43
- * @Description: 
+ * @LastEditTime: 2021-04-09 10:43:07
+ * @Description: 气象监测应用测试
  * @FilePath: /frontend-training/design_mode/observer/test.dart
  */
 import './weather_data.dart';

@@ -2,8 +2,8 @@
  * @Author: 明华
  * @Date: 2021-04-02 14:19:58
  * @LastEditors: 明华
- * @LastEditTime: 2021-04-02 15:21:13
- * @Description: 
+ * @LastEditTime: 2021-04-09 10:38:25
+ * @Description: 天气观测数据文件，实现主题接口
  * @FilePath: /frontend-training/design_mode/observer/weather_data.dart
  */
 import './subject.dart';
@@ -16,7 +16,7 @@ class WeatherData implements Subject {
   double _pressure; // 压强
 
   WeatherData() {
-    _observers = new List();
+    _observers = [];
   }
 
   @override

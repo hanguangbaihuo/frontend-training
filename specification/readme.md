@@ -2,12 +2,10 @@
  * @Author: 明华
  * @Date: 2021-01-29 14:52:42
  * @LastEditors: 明华
- * @LastEditTime: 2021-03-18 14:13:46
+ * @LastEditTime: 2021-04-02 15:54:36
  * @Description:
  * @FilePath: /frontend-training/specification/readme.md
 -->
-
-
 
 # 前端规范
 
@@ -48,6 +46,10 @@
    - 每个文件只允许有一个类
    - 独立功能封装在单独文件中，本身的一部分可以封装成函数或者直接写在 render 中。
    - readme.md 文件描述页面中最重要的逻辑实现
+4. 错误处理逻辑
+   - 全局错误处理
+   - 局部错误处理
+   - 错误报警
 
 ## 代码组织（重要性 2）：可维护性（最重要）、通用性、可扩展性、易用性、健壮性
 
