@@ -2,7 +2,7 @@
  * @Author: 明华
  * @Date: 2021-04-09 15:34:26
  * @LastEditors: 明华
- * @LastEditTime: 2021-04-09 16:07:45
+ * @LastEditTime: 2021-04-25 15:10:36
  * @Description: 
  * @FilePath: /frontend-training/design_mode/decorator/test.dart
  */
@@ -67,7 +67,7 @@ class Mocha extends CondimentDecorator {
   // 用一个实例变量记录饮料，也就是被装饰者。
   // 想办法让被装饰着被记录到实例变量中。
   // 这里的做法是：把饮料当做构造器函数的参数，有构造函数将饮料记录在实例变量中。
-  Beverage _beverage;
+  late Beverage _beverage;
 
   Mocha(Beverage beverage) {
     this._beverage = beverage;
@@ -90,7 +90,7 @@ class Mocha extends CondimentDecorator {
 
 // 豆浆
 class Soy extends CondimentDecorator {
-  Beverage _beverage;
+  late Beverage _beverage;
 
   Soy(Beverage beverage) {
     _beverage = beverage;
@@ -109,10 +109,10 @@ class Soy extends CondimentDecorator {
 
 // 奶泡
 class Whip extends CondimentDecorator {
-  Beverage _beverage;
+  late Beverage _beverage;
 
   Whip(Beverage beverage) {
-    _beverage = beverage;
+    this._beverage = beverage;
   }
 
   @override
@@ -128,7 +128,7 @@ class Whip extends CondimentDecorator {
 
 // 牛奶
 class Milk extends CondimentDecorator {
-  Beverage _beverage;
+  late Beverage _beverage;
 
   Milk(Beverage beverage) {
     _beverage = beverage;
